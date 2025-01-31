@@ -1,0 +1,27 @@
+Blog 13: Hyperparameter Tuning
+What is Hyperparameter Tuning?
+Hyperparameter tuning involves selecting the best model parameters to optimize performance. Unlike model parameters, hyperparameters are set before training. Common techniques include:
+Grid Search: Exhaustive search over predefined hyperparameter values.
+Random Search: Randomly selects combinations of hyperparameters.
+Bayesian Optimization: Uses probabilistic models to optimize parameters efficiently.
+Techniques for Hyperparameter Tuning
+1.Cross-validation: Splitting data for better evaluation.
+2.Automated Tuning: Using libraries like Optuna and Hyperopt.
+3.Early Stopping: Preventing overfitting by stopping training early.
+Simple Example: Grid Search in Scikit-Learn
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+
+# Sample dataset
+X = [[1, 2], [3, 4], [5, 6], [7, 8]]
+y = [0, 1, 0, 1]
+
+# Define model and parameters
+clf = RandomForestClassifier()
+param_grid = {'n_estimators': [10, 50, 100], 'max_depth': [None, 5, 10]}
+
+grid_search = GridSearchCV(clf, param_grid, cv=3)
+grid_search.fit(X, y)
+print("Best parameters:", grid_search.best_params_)
+Conclusion
+Hyperparameter tuning is essential for maximizing model performance. Automated methods help find the best configurations efficiently.
