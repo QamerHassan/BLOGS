@@ -1,0 +1,25 @@
+Blog 21: Reinforcement Learning (RL)
+What is Reinforcement Learning?
+Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by interacting with an environment. It is commonly used in:
+Game AI (e.g., AlphaGo, OpenAI Gym)
+Robotics
+Autonomous Vehicles
+Key Components of RL
+1.Agent: Learns and makes decisions.
+2.Environment: Where the agent operates.
+3.Reward Signal: Guides learning by providing feedback.
+4.Policy: Determines actions taken by the agent.
+Simple Example: Q-Learning
+import numpy as np
+
+# Initialize Q-table
+Q = np.zeros((5, 2))  # 5 states, 2 actions
+
+# Update rule
+learning_rate = 0.1
+discount_factor = 0.9
+reward = 10  # Sample reward
+Q[0, 1] = Q[0, 1] + learning_rate * (reward + discount_factor * np.max(Q[1, :]) - Q[0, 1])
+print("Updated Q-table:", Q)
+Conclusion
+RL is a powerful paradigm for decision-making systems. Techniques like Q-learning and deep reinforcement learning (DQN) enable complex problem-solving.
