@@ -1,0 +1,25 @@
+Blog 8: Classification Algorithms
+What is Classification?
+Classification is a supervised learning technique used to categorize data into predefined classes. Common algorithms include:
+Logistic Regression: Binary classification (e.g., spam detection).
+Decision Trees & Random Forest: Rule-based classification.
+Support Vector Machines (SVMs): Separating data using hyperplanes.
+Techniques for Classification
+1.Feature Selection: Choosing the most relevant variables.
+2.Hyperparameter Tuning: Adjusting model parameters.
+3.Cross-validation: Evaluating model performance.
+Simple Example: Decision Tree Classifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.datasets import load_iris
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Train model
+clf = DecisionTreeClassifier()
+clf.fit(X, y)
+
+print("Prediction for first sample:", clf.predict([X[0]]))
+Conclusion
+Classification models are fundamental in AI applications like fraud detection and medical diagnosis. Understanding different classifiers helps in building accurate models.
