@@ -1,0 +1,32 @@
+Blog 7: Regression Models
+What is Regression?
+Regression is a statistical method used for predicting continuous values. Common types include:
+Linear Regression: Simple relationships between variables.
+Polynomial Regression: Fits non-linear relationships.
+Ridge & Lasso Regression: Used for feature selection and regularization.
+Techniques for Regression Analysis
+1.Ordinary Least Squares (OLS): Minimizing error.
+2.Feature Scaling: Standardizing input values.
+3.Regularization: Preventing overfitting.
+Simple Example: Linear Regression
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Sample data
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+y = np.array([2, 4, 5, 4, 5])
+
+# Train model
+model = LinearRegression()
+model.fit(X, y)
+
+# Predict
+y_pred = model.predict(X)
+
+# Plot results
+plt.scatter(X, y, color='blue')
+plt.plot(X, y_pred, color='red')
+plt.show()
+Conclusion
+Regression is widely used for predictive modeling. Selecting the right regression technique depends on data complexity and feature interactions.
