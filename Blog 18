@@ -1,0 +1,20 @@
+Blog 18: Natural Language Processing (NLP)
+What is NLP?
+Natural Language Processing (NLP) enables machines to understand and generate human language. Applications include:
+Chatbots & Virtual Assistants
+Text Summarization
+Sentiment Analysis
+Common NLP Techniques
+1.Tokenization: Splitting text into words/sentences.
+2.Stopword Removal: Eliminating common words (e.g., "the", "is").
+3.Word Embeddings: Representing words as vectors (Word2Vec, GloVe, BERT).
+Simple Example: Tokenization with NLTK
+import nltk
+from nltk.tokenize import word_tokenize
+nltk.download('punkt')
+
+text = "Natural Language Processing is exciting!"
+tokens = word_tokenize(text)
+print("Tokens:", tokens)
+Conclusion
+NLP is a crucial AI field enabling machines to interact with human language. Advanced models like BERT and GPT revolutionize NLP tasks.
