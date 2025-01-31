@@ -1,0 +1,18 @@
+Blog 19: Transformers & Attention Mechanisms
+What are Transformers?
+Transformers are deep learning architectures designed for NLP tasks, outperforming traditional RNNs. They rely on:
+Self-Attention: Focuses on important words in a sentence.
+Positional Encoding: Retains order of words in sequences.
+Popular Transformer Models
+1.BERT (Bidirectional Encoder Representations from Transformers)
+2.GPT (Generative Pre-trained Transformer)
+3.T5 (Text-To-Text Transfer Transformer)
+Simple Example: Using Hugging Face's Transformers Library
+from transformers import pipeline
+
+# Load a pre-trained model for text generation
+generator = pipeline("text-generation", model="gpt2")
+result = generator("Artificial Intelligence is", max_length=50)
+print(result)
+Conclusion
+Transformers revolutionized NLP, enabling state-of-the-art performance in translation, text generation, and more.
