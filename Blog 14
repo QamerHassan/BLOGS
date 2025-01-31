@@ -1,0 +1,22 @@
+Blog 14: Overfitting & Underfitting
+Understanding Overfitting & Underfitting
+Overfitting: Model learns noise instead of patterns, leading to poor generalization.
+Underfitting: Model is too simple and fails to capture underlying trends.
+Techniques to Prevent Overfitting
+1.Regularization: L1 (Lasso) and L2 (Ridge) penalties.
+2.Dropout in Neural Networks: Randomly deactivating neurons during training.
+3.Data Augmentation: Increasing dataset variability.
+Simple Example: Regularization in Linear Regression
+from sklearn.linear_model import Ridge
+import numpy as np
+
+# Sample data
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([1.2, 1.9, 3.1, 3.8, 5.2])
+
+# Train model with Ridge Regression
+ridge = Ridge(alpha=1.0)
+ridge.fit(X, y)
+print("Model Coefficients:", ridge.coef_)
+Conclusion
+Balancing complexity and generalization is crucial for effective AI models. Regularization techniques help mitigate overfitting.
