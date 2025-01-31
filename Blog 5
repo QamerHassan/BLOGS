@@ -1,0 +1,25 @@
+
+Blog 5: Exploratory Data Analysis (EDA)
+Importance of EDA
+Exploratory Data Analysis (EDA) helps in understanding data patterns, detecting anomalies, and summarizing key statistics before applying machine learning models. Key steps include:
+Summary Statistics: Mean, median, standard deviation.
+Data Visualization: Histograms, scatter plots, box plots.
+Correlation Analysis: Finding relationships between variables.
+Techniques for EDA
+1.Descriptive Statistics: Using .describe() in Pandas.
+2.Data Visualization: Seaborn and Matplotlib.
+3.Correlation Heatmaps: Identifying strong relationships between features.
+Simple Example: Data Visualization
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Sample dataset
+data = {"Age": [25, 30, 22, 35, 40], "Salary": [50000, 54000, 45000, 58000, 62000]}
+df = pd.DataFrame(data)
+
+# Histogram
+sns.histplot(df['Age'], bins=5, kde=True)
+plt.show()
+Conclusion
+EDA is an essential step for uncovering insights and preparing data for machine learning models. Proper analysis leads to better model performance.
