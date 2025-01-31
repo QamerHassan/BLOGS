@@ -1,0 +1,25 @@
+Blog 6: Supervised vs. Unsupervised Learning
+What is Supervised Learning?
+Supervised learning uses labeled data to train models. Examples include:
+Regression: Predicting continuous values (e.g., house prices).
+Classification: Assigning labels to data (e.g., spam detection).
+What is Unsupervised Learning?
+Unsupervised learning finds patterns in data without labels. Examples include:
+Clustering: Grouping similar data points (e.g., customer segmentation).
+Dimensionality Reduction: Reducing data complexity (e.g., PCA).
+Simple Example: Classification with Scikit-Learn
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_iris
+
+# Load dataset
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2)
+
+# Train model
+clf = RandomForestClassifier()
+clf.fit(X_train, y_train)
+
+print("Model Accuracy:", clf.score(X_test, y_test))
+Conclusion
+Supervised learning is best for labeled datasets, while unsupervised learning helps in discovering hidden patterns. Understanding both techniques is crucial for AI applications.
