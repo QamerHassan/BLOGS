@@ -1,0 +1,22 @@
+Blog 11: Feature Engineering
+Importance of Feature Engineering
+Feature engineering enhances machine learning models by creating meaningful features from raw data. Techniques include:
+Feature Extraction: Transforming raw data into structured features.
+Feature Selection: Choosing relevant features to improve model accuracy.
+Feature Transformation: Normalization, encoding, and scaling.
+Techniques for Feature Engineering
+1.One-Hot Encoding: Handling categorical variables.
+2.Binning: Converting continuous variables into categorical bins.
+3.Polynomial Features: Creating interaction terms.
+Simple Example: One-Hot Encoding
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+
+# Sample data
+data = pd.DataFrame({"City": ["London", "Paris", "New York"]})
+encoder = OneHotEncoder()
+encoded_data = encoder.fit_transform(data[["City"]]).toarray()
+
+print("Encoded Data:\n", encoded_data)
+Conclusion
+Good feature engineering can significantly improve model performance. Understanding how to create and transform features is a crucial skill for AI practitioners.
