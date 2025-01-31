@@ -1,0 +1,27 @@
+Blog 15: Neural Networks & Deep Learning Basics
+What are Neural Networks?
+Neural networks are computational models inspired by the human brain. They consist of layers of interconnected nodes (neurons). Key components include:
+Input Layer: Receives raw data.
+Hidden Layers: Extract features and patterns.
+Output Layer: Produces predictions.
+Common Deep Learning Architectures
+1.Feedforward Networks: Standard multi-layer perceptrons (MLPs).
+2.Convolutional Neural Networks (CNNs): Used for image processing.
+3.Recurrent Neural Networks (RNNs): Used for sequential data like text.
+Simple Example: Training a Neural Network with TensorFlow
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Create model
+model = Sequential([
+    Dense(10, activation='relu', input_shape=(5,)),
+    Dense(1, activation='linear')
+])
+
+# Compile and train
+model.compile(optimizer='adam', loss='mse')
+print("Model summary:")
+model.summary()
+Conclusion
+Deep learning powers modern AI applications, from image recognition to language processing. Understanding neural networks is essential for advanced AI development.
