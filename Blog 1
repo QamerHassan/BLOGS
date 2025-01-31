@@ -1,0 +1,30 @@
+Blog 1: Introduction to AI
+What is Artificial Intelligence?
+Artificial Intelligence (AI) is the simulation of human intelligence in machines, allowing them to perform tasks like learning, reasoning, and problem-solving. AI can be broadly classified into:
+Narrow AI: Designed for specific tasks (e.g., Chatbots, Recommendation Systems).
+General AI: Hypothetical AI with human-like cognitive abilities.
+Super AI: A theoretical AI surpassing human intelligence.
+Types of AI
+1.Reactive AI – No memory, only reacts (e.g., Chess-playing AI).
+2.Limited Memory AI – Can use past data (e.g., Self-driving cars).
+3.Theory of Mind AI – Understands human emotions (not yet developed).
+4.Self-aware AI – AI with consciousness (hypothetical).
+Applications of AI
+Healthcare: Disease prediction, medical imaging.
+Finance: Fraud detection, automated trading.
+Retail: Personalized recommendations.
+Autonomous Systems: Drones, self-driving cars.
+Simple AI Code: Rule-Based Chatbot
+def simple_chatbot(user_input):
+    responses = {
+        "hello": "Hi there! How can I help?",
+        "bye": "Goodbye! Have a great day.",
+        "what is AI?": "AI stands for Artificial Intelligence. It enables machines to think and learn."
+    }
+    return responses.get(user_input.lower(), "I'm not sure. Can you rephrase?")
+
+# Example usage
+user_query = input("You: ")
+print("Bot:", simple_chatbot(user_query))
+Conclusion
+AI is transforming industries by enabling machines to mimic human intelligence. Understanding its foundations is key to diving deeper into ML and DL.
