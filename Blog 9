@@ -1,0 +1,24 @@
+Blog 9: Clustering Algorithms
+What is Clustering?
+Clustering is an unsupervised learning technique that groups similar data points together based on their features. Common algorithms include:
+K-Means: Partitions data into K clusters.
+Hierarchical Clustering: Forms a tree-like structure of clusters.
+DBSCAN: Density-based clustering for irregularly shaped clusters.
+Techniques for Clustering
+1.Choosing the Right Number of Clusters: Using the Elbow Method.
+2.Distance Metrics: Euclidean, Manhattan, Cosine similarity.
+3.Dimensionality Reduction: Applying PCA before clustering.
+Simple Example: K-Means Clustering
+from sklearn.cluster import KMeans
+import numpy as np
+
+# Sample data
+X = np.array([[1, 2], [2, 3], [3, 4], [8, 9], [9, 10]])
+
+# Train model
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(X)
+
+print("Cluster labels:", kmeans.labels_)
+Conclusion
+Clustering is widely used for market segmentation, anomaly detection, and data compression. Choosing the right algorithm depends on the data structure.
