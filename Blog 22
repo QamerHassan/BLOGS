@@ -1,0 +1,27 @@
+Blog 22: Autoencoders & Anomaly Detection
+What are Autoencoders?
+Autoencoders are neural networks used for unsupervised learning, primarily for:
+Dimensionality Reduction
+Feature Extraction
+Anomaly Detection
+Structure of Autoencoders
+1.Encoder: Compresses input data.
+2.Bottleneck: Represents core features.
+3.Decoder: Reconstructs input from compressed representation.
+Simple Example: Autoencoder with TensorFlow
+import tensorflow as tf
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Dense
+
+# Define model
+input_layer = Input(shape=(10,))
+encoded = Dense(5, activation='relu')(input_layer)
+decoded = Dense(10, activation='sigmoid')(encoded)
+autoencoder = Model(input_layer, decoded)
+
+# Compile model
+autoencoder.compile(optimizer='adam', loss='mse')
+print("Autoencoder Summary:")
+autoencoder.summary()
+Conclusion
+Autoencoders are widely used for detecting anomalies in datasets. They help identify patterns and outliers in various applications.
