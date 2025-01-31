@@ -1,0 +1,29 @@
+Blog 12: Model Evaluation Metrics
+Why Model Evaluation is Important?
+Evaluating AI models ensures they perform well and generalize to unseen data. Different tasks require different metrics:
+Classification Metrics: Accuracy, Precision, Recall, F1-score.
+Regression Metrics: Mean Squared Error (MSE), R-squared.
+Clustering Metrics: Silhouette Score, Davies-Bouldin Index.
+Techniques for Model Evaluation
+1.Confusion Matrix: Evaluates classification models.
+2.Cross-Validation: Splitting data for robust evaluation.
+3.ROC & AUC: Measuring classification performance.
+Simple Example: Classification Report
+from sklearn.metrics import classification_report
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# Load dataset
+iris = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2)
+
+# Train model
+clf = RandomForestClassifier()
+clf.fit(X_train, y_train)
+
+# Evaluate
+predictions = clf.predict(X_test)
+print(classification_report(y_test, predictions))
+Conclusion
+Model evaluation is crucial for improving AI model performance. Choosing the right metric ensures models are reliable and effective.
