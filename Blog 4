@@ -1,0 +1,27 @@
+Blog 4: Data Preprocessing & Cleaning
+Importance of Data Preprocessing
+Data preprocessing is a crucial step in AI that ensures the dataset is clean and structured for machine learning models. Key steps include:
+Handling Missing Data: Filling or removing missing values.
+Normalization & Standardization: Ensuring data consistency.
+Feature Engineering: Creating new meaningful features.
+Techniques for Cleaning Data
+1.Handling Missing Values: Removing rows, filling with mean/median.
+2.Encoding Categorical Data: One-hot encoding, label encoding.
+3.Feature Scaling: StandardScaler, MinMaxScaler.
+Simple Example: Handling Missing Data
+import pandas as pd
+from sklearn.impute import SimpleImputer
+
+# Sample dataset
+data = {"Age": [25, 30, None, 35], "Salary": [50000, 54000, 58000, None]}
+df = pd.DataFrame(data)
+
+# Handling missing values
+imputer = SimpleImputer(strategy="mean")
+df.iloc[:, :] = imputer.fit_transform(df)
+
+print("Cleaned Data:\n", df)
+Conclusion
+Good data preprocessing leads to more accurate and efficient AI models. Cleaning and transforming raw data is a key step in the pipeline.
+
+I'll continue adding the remaining topics in this structured format. Let me know if you have any specific preferences!
