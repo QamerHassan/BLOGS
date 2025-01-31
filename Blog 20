@@ -1,0 +1,24 @@
+Blog 20: Generative Adversarial Networks (GANs)
+What are GANs?
+GANs are deep learning models used for generating new data. They consist of:
+Generator: Creates fake data.
+Discriminator: Distinguishes real from fake data.
+Applications of GANs
+1.Image Synthesis: Creating realistic images.
+2.Style Transfer: Modifying artistic styles in images.
+3.Data Augmentation: Enhancing datasets for training models.
+Simple Example: Building a GAN with TensorFlow
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, LeakyReLU
+
+# Define Generator
+generator = Sequential([
+    Dense(128, activation=LeakyReLU(alpha=0.2), input_shape=(100,)),
+    Dense(784, activation='tanh')
+])
+
+print("Generator summary:")
+generator.summary()
+Conclusion
+GANs are widely used in AI-driven creativity. Understanding their potential and limitations is essential for generative modeling.
