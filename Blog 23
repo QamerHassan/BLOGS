@@ -1,0 +1,21 @@
+Blog 23: Transfer Learning
+What is Transfer Learning?
+Transfer Learning involves leveraging pre-trained models for new tasks. This reduces training time and improves accuracy. Common use cases include:
+Image Classification (Using ResNet, VGG, etc.)
+NLP Applications (Using BERT, GPT, etc.)
+Medical Diagnosis (Using pre-trained models on medical images)
+Simple Example: Using a Pre-Trained Model in Keras
+from tensorflow.keras.applications import VGG16
+from tensorflow.keras.models import Model
+
+# Load pre-trained model
+base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+
+# Freeze layers
+for layer in base_model.layers:
+    layer.trainable = False
+
+print("Base Model Summary:")
+base_model.summary()
+Conclusion
+Transfer learning accelerates model training and improves performance on tasks with limited data.
