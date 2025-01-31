@@ -1,0 +1,28 @@
+Blog 17: Recurrent Neural Networks (RNNs)
+What are RNNs?
+Recurrent Neural Networks (RNNs) are a type of deep learning model used for sequential data. They maintain a memory of previous inputs, making them suitable for:
+Time Series Forecasting
+Natural Language Processing (NLP)
+Speech Recognition
+Common RNN Architectures
+1.Simple RNN: Basic recurrent connections.
+2.Long Short-Term Memory (LSTM): Solves vanishing gradient problems.
+3.Gated Recurrent Units (GRU): A simplified version of LSTMs.
+Simple Example: LSTM with Keras
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# Define model
+model = Sequential([
+    LSTM(50, return_sequences=True, input_shape=(10, 1)),
+    LSTM(50),
+    Dense(1)
+])
+
+# Compile model
+model.compile(optimizer='adam', loss='mse')
+print("Model summary:")
+model.summary()
+Conclusion
+RNNs are powerful for sequential data but suffer from long-term dependency issues. LSTMs and GRUs help mitigate these challenges.
