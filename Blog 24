@@ -1,0 +1,19 @@
+Blog 24: AI Ethics & Bias in Machine Learning
+Why is AI Ethics Important?
+AI systems can exhibit bias and ethical concerns if not designed carefully. Key areas of concern include:
+Bias in Training Data: Models inherit biases present in datasets.
+Fairness & Accountability: Ensuring AI decisions are explainable and just.
+Privacy & Security: Protecting user data.
+Strategies to Reduce Bias
+1.Diverse Training Data: Use balanced datasets.
+2.Fair Algorithms: Implement fairness-aware learning techniques.
+3.Explainability Tools: Use SHAP, LIME for model transparency.
+Simple Example: Checking Bias in a Dataset
+import pandas as pd
+
+# Sample biased dataset
+data = pd.DataFrame({"Gender": ["Male", "Male", "Female", "Female"], "Salary": [50, 55, 45, 48]})
+print("Gender Pay Gap:")
+print(data.groupby("Gender").mean())
+Conclusion
+AI ethics is critical for responsible AI development. Bias mitigation techniques ensure fair and transparent AI systems.
